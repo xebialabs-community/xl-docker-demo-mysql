@@ -1,4 +1,4 @@
-FROM mysql:5.7.16
+FROM mysql:5.7.17
 RUN apt-get update && apt-get install -y supervisor openssh-server
 ADD resources/sshd_config /etc/ssh/sshd_config
 RUN chmod 644 /etc/ssh/sshd_config && echo "root:xebialabs" | chpasswd
